@@ -50,25 +50,17 @@
     </div>
 
     <div class="container homepage">
-    <!--
-      <div class="row">
-         <div class="col-md-3"></div>
-            <div class="col-md-6 welcome-page">
-              <h2>Mi proyecto WEB. Esta es mi página de usuario normal.</h2>
-            </div>
-          <div class="col-md-3"></div>
-        </div>
-        -->
-  <!-- ----------------------code---------------start-------------- -->
+
+  <!-- ----------------------Inicio del código-------------- -->
             <div class="mail-box">
                 <aside class="sm-side">
                     <div class="user-head">
                         <a class="inbox-avatar" href="javascript:;">
-                            <img width="64" hieght="60" src="http://www.tutorialspoint.com/about/images/mohtashim.jpg">
+                            <img width="64" hieght="60" src="./images/programador.png">
                         </a>
                         <div class="user-name">
-                            <h5><a href="#">Mohtashim M.</a></h5>
-                            <span><a href="#">contact@tutorialspoint.com</a></span>
+                            <h5><a href="#"><?php echo $_SESSION['sess_nombre'];?></a></h5>
+                            <span><a href="#"><?php echo $_SESSION['sess_username'];?>@upb.edu.mx</a></span>
                         </div>
                         <a class="mail-dropdown pull-right" href="javascript:;">
                             <i class="fa fa-chevron-down"></i>
@@ -76,7 +68,7 @@
                     </div>
                     <div class="inbox-body">
                         <a href="#myModal" data-toggle="modal" title="Compose" class="btn btn-compose">
-                              Compose
+                              Actividades
                           </a>
                         <!-- Modal -->
                         <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
@@ -134,69 +126,53 @@
                     </div>
                     <ul class="inbox-nav inbox-divider">
                         <li class="active">
-                            <a href="#"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">2</span></a>
+                            <a href="#"><i class="fa fa-inbox"></i> Avisos <span class="label label-danger pull-right">2</span></a>
 
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
+                            <a href="#"><i class="fa fa-envelope-o"></i> Archivos</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bookmark-o"></i> Important</a>
+                            <a href="#"><i class="fa fa-bookmark-o"></i> Tareas</a>
                         </li>
                         <li>
-                            <a href="#"><i class=" fa fa-external-link"></i> Drafts <span class="label label-info pull-right">30</span></a>
+                            <a href="#"><i class=" fa fa-external-link"></i> Evaluación<span class="label label-info pull-right">30</span></a>
                         </li>
-                        <li>
-                            <a href="#"><i class=" fa fa-trash-o"></i> Trash</a>
-                        </li>
+
                     </ul>
                     <ul class="nav nav-pills nav-stacked labels-info inbox-divider">
                         <li>
-                            <h4>Labels</h4> </li>
+                            <h4>Tópicos</h4> </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-sign-blank text-danger"></i> Work </a>
+                            <a href="#"> <i class=" fa fa-sign-blank text-danger"></i> Mapa mental </a>
                         </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-sign-blank text-success"></i> Design </a>
+                            <a href="#"> <i class=" fa fa-sign-blank text-success"></i> Diseño </a>
                         </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-sign-blank text-info "></i> Family </a>
+                            <a href="#"> <i class=" fa fa-sign-blank text-info "></i> Programas </a>
                         </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-sign-blank text-warning "></i> Friends </a>
+                            <a href="#"> <i class=" fa fa-sign-blank text-warning "></i> Java </a>
                         </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-sign-blank text-primary "></i> Office </a>
+                            <a href="#"> <i class=" fa fa-sign-blank text-primary "></i> PHP </a>
                         </li>
                     </ul>
                     <ul class="nav nav-pills nav-stacked labels-info ">
                         <li>
-                            <h4>Buddy online</h4> </li>
+                            <h4>Notas</h4> </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-circle text-success"></i>Gopal K Verma
-                                <p>I do not think</p>
+                            <a href="#"> <i class=" fa fa-circle text-success"></i>En tiempo
+                                <p>Puedes subir tarea</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#"> <i class=" fa fa-circle text-danger"></i>Sairamkrishna
-                                <p>Busy with coding</p>
+                            <a href="#"> <i class=" fa fa-circle text-danger"></i>Atrasado
+                                <p>No aceptado</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#"> <i class=" fa fa-circle text-muted "></i>Kiran
-                                <p>I out of control</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class=" fa fa-circle text-muted "></i>Raju
-                                <p>I am not here</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class=" fa fa-circle text-muted "></i>Johar
-                                <p>I do not think</p>
-                            </a>
-                        </li>
+
                     </ul>
 
                     <div class="inbox-body text-center">
@@ -220,10 +196,10 @@
                 </aside>
                 <aside class="lg-side">
                     <div class="inbox-head">
-                        <h3>Inbox</h3>
+                        <h3>Localizar tarea</h3>
                         <form action="#" class="pull-right position">
                             <div class="input-append">
-                                <input type="text" class="sr-input" placeholder="Search Mail">
+                                <input type="text" class="sr-input" placeholder="Buscar">
                                 <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
                             </div>
                         </form>
@@ -234,13 +210,13 @@
                                 <input type="checkbox" class="mail-checkbox mail-group-checkbox">
                                 <div class="btn-group">
                                     <a data-toggle="dropdown" href="#" class="btn mini all" aria-expanded="false">
-                                         All
+                                         Todo
                                          <i class="fa fa-angle-down "></i>
                                      </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"> None</a></li>
-                                        <li><a href="#"> Read</a></li>
-                                        <li><a href="#"> Unread</a></li>
+                                        <li><a href="#"> Nada</a></li>
+                                        <li><a href="#"> Leído</a></li>
+                                        <li><a href="#"> No leído</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -250,33 +226,9 @@
                                     <i class=" fa fa-refresh"></i>
                                 </a>
                             </div>
-                            <div class="btn-group hidden-phone">
-                                <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
-                                     More
-                                     <i class="fa fa-angle-down "></i>
-                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                                    <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <a data-toggle="dropdown" href="#" class="btn mini blue">
-                                     Move to
-                                     <i class="fa fa-angle-down "></i>
-                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                                    <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                                </ul>
-                            </div>
 
                             <ul class="unstyled inbox-pagination">
-                                <li><span>1-50 of 234</span></li>
+                                <li><span>1-10 of 22</span></li>
                                 <li>
                                     <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
                                 </li>
@@ -292,8 +244,8 @@
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message  dont-show">PHPClass</td>
-                                    <td class="view-message ">Added a new class: Login Class Fast Site</td>
+                                    <td class="view-message  dont-show">Multiplicación de matrices</td>
+                                    <td class="view-message ">Realizar el producto de 2 matrices y almacenar resultado</td>
                                     <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
                                     <td class="view-message  text-right">9:27 AM</td>
                                 </tr>
@@ -302,207 +254,102 @@
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Google Webmaster </td>
-                                    <td class="view-message">Improve the search presence of WebSite</td>
+                                    <td class="view-message dont-show">Programa Recursivo </td>
+                                    <td class="view-message">Programa que obtiene el factorial de un número</td>
                                     <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 15</td>
+                                    <td class="view-message text-right">31 Ene</td>
                                 </tr>
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">JW Player</td>
-                                    <td class="view-message">Last Chance: Upgrade to Pro for </td>
+                                    <td class="view-message dont-show">Mapa mental</td>
+                                    <td class="view-message">Mapa mental de árboles binarios </td>
                                     <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 15</td>
+                                    <td class="view-message text-right">Feb 02</td>
                                 </tr>
+
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Tim Reid, S P N</td>
-                                    <td class="view-message">Boost Your Website Traffic</td>
+                                    <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                                    <td class="view-message dont-show">Investigación <span class="label label-danger pull-right">urgente</span></td>
+                                    <td class="view-message">Arboles binarios</td>
                                     <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">April 01</td>
+                                    <td class="view-message text-right">Feb 03</td>
                                 </tr>
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="view-message dont-show">Freelancer.com <span class="label label-danger pull-right">urgent</span></td>
-                                    <td class="view-message">Stop wasting your visitors </td>
+                                    <td class="view-message dont-show">Recursividad </td>
+                                    <td class="view-message">Investigación conceptos</td>
+                                    <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                                    <td class="view-message text-right">Feb 14</td>
+                                </tr>
+
+                                <tr class="">
+                                    <td class="inbox-small-cells">
+                                        <input type="checkbox" class="mail-checkbox">
+                                    </td>
+                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                    <td class="view-message dont-show">Exposición<span class="label label-success pull-right">En clase</span></td>
+                                    <td class="view-message view-message">Exposición ordenamientos</td>
                                     <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">May 23</td>
+                                    <td class="view-message text-right">Feb 04</td>
+                                </tr>
+
+                                <tr class="">
+                                    <td class="inbox-small-cells">
+                                        <input type="checkbox" class="mail-checkbox">
+                                    </td>
+                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                    <td class="view-message dont-show">Colaborativo<span class="label label-info pull-right">En línea</span></td>
+                                    <td class="view-message view-message">Conceptos colaborativos</td>
+                                    <td class="view-message inbox-small-cells"></td>
+                                    <td class="view-message text-right">Ene 24</td>
                                 </tr>
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="view-message dont-show">WOW Slider </td>
-                                    <td class="view-message">New WOW Slider v7.8 - 67% off</td>
-                                    <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">March 14</td>
+                                    <td class="view-message dont-show">Participación</td>
+                                    <td class="view-message">Prototipo</td>
+                                    <td class="view-message inbox-small-cells"></td>
+                                    <td class="view-message text-right">Ene 09</td>
                                 </tr>
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="view-message dont-show">LinkedIn Pulse</td>
-                                    <td class="view-message">The One Sign Your Co-Worker Will Stab</td>
+                                    <td class="dont-show">Trabajo no. 4</td>
+                                    <td class="view-message">Resumen de tema</td>
                                     <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">Feb 19</td>
+                                    <td class="view-message text-right">Feb 14</td>
                                 </tr>
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Drupal Community<span class="label label-success pull-right">megazine</span></td>
-                                    <td class="view-message view-message">Welcome to the Drupal Community</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 04</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Facebook</td>
-                                    <td class="view-message view-message">Somebody requested a new password </td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">June 13</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Skype <span class="label label-info pull-right">family</span></td>
-                                    <td class="view-message view-message">Password successfully changed</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 24</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="view-message dont-show">Google+</td>
-                                    <td class="view-message">Mohtashim, do you know</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 09</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="dont-show">Mohtashim</td>
-                                    <td class="view-message">7 new singles we think you'll like</td>
+                                    <td class="view-message dont-show">Uso de la herramienta </td>
+                                    <td class="view-message">Dominio de Java </td>
                                     <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">May 14</td>
+                                    <td class="view-message text-right">Ene 25</td>
                                 </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">LinkedIn </td>
-                                    <td class="view-message">Mohtashim: Nokia Networks, System Group and </td>
-                                    <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">February 25</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="dont-show">Facebook</td>
-                                    <td class="view-message view-message">Your account was recently logged into</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 14</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Twitter</td>
-                                    <td class="view-message">Your Twitter password has been changed</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">April 07</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">InternetSeer Website Monitoring</td>
-                                    <td class="view-message">http://golddesigner.org/ Performance Report</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">July 14</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="view-message dont-show">AddMe.com</td>
-                                    <td class="view-message">Submit Your Website to the AddMe Business Directory</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">August 10</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Terri Rexer, S P N</td>
-                                    <td class="view-message view-message">Forget Google AdWords: Un-Limited Clicks fo</td>
-                                    <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">April 14</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Bertina </td>
-                                    <td class="view-message">IMPORTANT: Don't lose your domains!</td>
-                                    <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">June 16</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                                    <td class="view-message dont-show">Laura Gaffin, S P N </td>
-                                    <td class="view-message">Your Website On Google (Higher Rankings Are Better)</td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">August 10</td>
-                                </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show">Facebook</td>
-                                    <td class="view-message view-message">Mohtashim Login faild</td>
-                                    <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message text-right">feb 14</td>
-                                </tr>
+
+
                             </tbody>
                         </table>
                     </div>
                 </aside>
             </div>
-            <!-- --Code------end---------------------------------  -->
+            <!-- --Find el programa---------------------------------  -->
     </div>    
 
     <!-- jQuery (necesario para Bootstrap's JavaScript plugins) -->
