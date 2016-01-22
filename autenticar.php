@@ -1,4 +1,4 @@
-<?php 
+<?php
 	// conexión con la bd
 	require 'conexion.php';
 
@@ -15,8 +15,8 @@
 		$password = $_POST['password'];
 
 	}
-	
-	echo $username ." : ".$password;
+
+	//echo $username ." : ".$password;
 
 	//Ejecutar el query para determinar que usuario se esta logeando
 	$resultado = $db->query("SELECT * FROM users WHERE username='$username' AND password='$password'");
@@ -30,7 +30,7 @@
 		$_SESSION['sess_username'] = $fila['username'];
 		$_SESSION['sess_nombre'] = $fila['nombre'];
 		$_SESSION['sess_userrole'] = $fila['role'];
-		echo $_SESSION['sess_userrole'];
+		//echo $_SESSION['sess_userrole'];
 		session_write_close();
 
 		if( $_SESSION['sess_userrole'] == "admin"){
@@ -56,9 +56,9 @@
 		session_regenerate_id();
 		$_SESSION['sess_user_id'] = $row['id'];
 		$_SESSION['sess_username'] = $row['username'];
-        $_SESSION['sess_userrole'] = $row['role'];
+		$_SESSION['sess_userrole'] = $row['role'];
 
-        echo $_SESSION['sess_userrole'];
+		echo $_SESSION['sess_userrole'];
 		session_write_close();
 
 		if( $_SESSION['sess_userrole'] == "admin"){
@@ -66,8 +66,8 @@
 		}else{
 			header('Location: userhome.php');
 		}
-		
-		
+
+
 	}
 	*/
 
