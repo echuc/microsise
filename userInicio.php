@@ -136,7 +136,7 @@
                             <a href="#"><i class="fa fa-bookmark-o"></i> Tareas</a>
                         </li>
                         <li>
-                            <a href="#"><i class=" fa fa-external-link"></i> Evaluación<span class="label label-info pull-right">30</span></a>
+                            <a href="#"><i class=" fa fa-external-link"></i> Evaluación<span class="label label-info pull-right">3</span></a>
                         </li>
 
                     </ul>
